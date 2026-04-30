@@ -22,8 +22,8 @@ I executed a two-stage hardening strategy to transition the environment to a **"
 ### Step 1: Ingress Rule Hardening
 I identified that the server was listening for RDP traffic from "Any" source. I immediately restricted this by creating a **Priority 100** rule to whitelist only my administrative Public IP.
 
-* **Configuration:** [01-restricted-nsg-rule.png](assets/01-restricted-nsg-rule.png)
-* **Security Audit:** [02-nsg-audit-list.png](assets/02-nsg-audit-list.png)
+*![Restricted NSG Rule](assets/01-restricted-nsg-rule.png)
+![NSG Audit List](assets/02-nsg-audit-list.png)
 
 ### Step 2: Verification of Denial
 To ensure the firewall was active, I attempted to connect from a secondary machine (`NewVM`) on an external network. The connection was successfully dropped, proving the "Explicit Allow" logic was functional.
