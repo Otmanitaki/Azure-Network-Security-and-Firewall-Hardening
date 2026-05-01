@@ -49,6 +49,7 @@ Security was enforced using Certificate-Based Authentication. I used **PowerShel
 **Certificate Data Setup:** 
   
 ![05-vpn-auth-setup.png](assets/05-vpn-auth-setup.png)
+
 **PowerShell Execution:** 
   
 ![07-cert-generation-proof.png](assets/07-cert-generation-proof.png)
