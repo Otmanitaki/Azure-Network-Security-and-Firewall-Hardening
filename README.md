@@ -52,8 +52,7 @@ Security was enforced using Certificate-Based Authentication. I used **PowerShel
 ### Step 3: Point-to-Site Configuration
 I established a VPN Address Pool (172.16.0.0/24) to ensure that VPN clients are assigned a dedicated internal range, which I then whitelisted in the DC-05 NSG.
 
-**P2S Addressing:** 
-  ![06-p2s-vpn-configuration.png](assets/06-p2s-vpn-configuration.png)
+**P2S Addressing:** ![06-p2s-vpn-configuration.png](assets/06-p2s-vpn-configuration.png)
 
 ---
 
