@@ -38,7 +38,9 @@ To ensure the firewall was active, I attempted to connect from a secondary machi
 ### Step 1: Gateway Infrastructure
 To eliminate the need for any public-facing RDP ports, I provisioned a **Virtual Network Gateway**. This required the creation of a dedicated `GatewaySubnet` (10.0.1.0/24) to handle the encrypted traffic.
 
-* **Deployment Progress:** ![04-vnet-gateway-config.png](assets/04-vnet-gateway-config.png)
+* **Deployment Progress:**
+
+![04-vnet-gateway-config.png](assets/04-vnet-gateway-config.png)
 
 ### Step 2: PKI Certificate Generation
 Security was enforced using Certificate-Based Authentication. I used **PowerShell** to generate a Root Certificate (The Lock) and a Client Certificate (The Key). The Root Certificate's public data was uploaded to Azure to act as the authentication authority.
