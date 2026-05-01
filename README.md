@@ -47,9 +47,11 @@ To eliminate the need for any public-facing RDP ports, I provisioned a **Virtual
 Security was enforced using Certificate-Based Authentication. I used **PowerShell** to generate a Root Certificate (The Lock) and a Client Certificate (The Key). The Root Certificate's public data was uploaded to Azure to act as the authentication authority.
 
 **Certificate Data Setup:** 
-  ![05-vpn-auth-setup.png](assets/05-vpn-auth-setup.png)
+  
+![05-vpn-auth-setup.png](assets/05-vpn-auth-setup.png)
 **PowerShell Execution:** 
-  ![07-cert-generation-proof.png](assets/07-cert-generation-proof.png)
+  
+![07-cert-generation-proof.png](assets/07-cert-generation-proof.png)
 
 ### Step 3: Point-to-Site Configuration
 I established a VPN Address Pool (172.16.0.0/24) to ensure that VPN clients are assigned a dedicated internal range, which I then whitelisted in the DC-05 NSG.
