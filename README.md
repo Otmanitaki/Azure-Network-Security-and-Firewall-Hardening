@@ -29,7 +29,8 @@ I identified that the server was listening for RDP traffic from "Any" source. I 
 To ensure the firewall was active, I attempted to connect from a secondary machine (`NewVM`) on an external network. The connection was successfully dropped, proving the "Explicit Allow" logic was functional.
 
 * **Evidence of Denial:**
-  ![03-external-access-denied.png](assets/03-external-access-denied.png)
+
+![03-external-access-denied.png](assets/03-external-access-denied.png)
 
 ---
 
@@ -53,7 +54,9 @@ Security was enforced using Certificate-Based Authentication. I used **PowerShel
 ### Step 3: Point-to-Site Configuration
 I established a VPN Address Pool (172.16.0.0/24) to ensure that VPN clients are assigned a dedicated internal range, which I then whitelisted in the DC-05 NSG.
 
-**P2S Addressing:** ![06-p2s-vpn-configuration.png](assets/06-p2s-vpn-configuration.png)
+**P2S Addressing:** 
+
+![06-p2s-vpn-configuration.png](assets/06-p2s-vpn-configuration.png)
 
 ---
 
@@ -63,14 +66,19 @@ I established a VPN Address Pool (172.16.0.0/24) to ensure that VPN clients are 
 To conclude the lab, I performed a final audit to prove that the server was now invisible to the public internet but accessible via the secure tunnel.
 
 1. **VPN Disconnected:** Connection attempts to the server failed entirely.
-  ![09-access-denial-vpn-off.png](assets/09-access-denial-vpn-off.png)
+
+![09-access-denial-vpn-off.png](assets/09-access-denial-vpn-off.png)
+
 2. **VPN Connected:** A secure tunnel was established, allowing for a successful ICMP ping and RDP session via the **Private IP (10.0.0.4)**.
-  ![08-vpn-connection-success.png](assets/08-vpn-connection-success.png)
+
+![08-vpn-connection-success.png](assets/08-vpn-connection-success.png)
+
 ### Final Session Success
 The final image confirms a successful RDP session to the internal hostname `DC-05` through the encrypted VPN tunnel.
 
 **Secure Management Session:** 
-  ![10-secure-internal-rdp.png](assets/10-secure-internal-rdp.png)
+  
+![10-secure-internal-rdp.png](assets/10-secure-internal-rdp.png)
 
 ---
 
